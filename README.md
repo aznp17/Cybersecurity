@@ -30,6 +30,11 @@ To understand the current threat landscape, we must study the past. This folder 
 * **Threat Actor Tactics:** Breakdowns of how advanced persistent threats (APTs) mapped to the MITRE ATT&CK framework during these historical events.
 * **Lessons Learned:** Strategic takeaways on how modern security frameworks (like NIST or CMMC) could have prevented these disasters.
 
+
+### 4. ISO 27001
+
+Documentation of ISO 27001 control implementation within Microsoft Azure.
+
 ---
 
 ## 🧭 How to Navigate the Repository
