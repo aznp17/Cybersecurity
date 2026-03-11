@@ -20,7 +20,7 @@ This section contains raw and sanitized output from Nessus security assessment t
 This directory contains the practical steps and documentation used to close the vulnerabilities found in the scans.
 
 * **Step-by-Step Patching Guides:** Documentation on how to mitigate specific CVEs.
-* **Architecture Adjustments:** Diagrams and explanations for redesigning networks to implement Zero Trust principles or network segmentation.
+* **Architecture Adjustments:** Explanations for editing the networks to implement Zero Trust principles or network segmentation.
 
 ### 3. 📜 Famous Cybersecurity Reports & Case Studies
 
