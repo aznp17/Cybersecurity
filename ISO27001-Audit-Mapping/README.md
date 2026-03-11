@@ -31,7 +31,4 @@ You can't defend what you don't understand. Here is how I’m mapping the 7 laye
 I don’t leave security to "human memory." I use **Azure Policy** to write rules in **JSON** that literally block insecure deployments.
 * **Example:** If a dev tries to spin up a Storage Account without HTTPS enabled, my policy triggers a `Deny` effect and kills the deployment instantly. 
 * *ISO Mapping:* **Control 8.24 (Cryptography)**.
-
-[Image of Azure Policy JSON if-then enforcement logic diagram]
-
 ###
