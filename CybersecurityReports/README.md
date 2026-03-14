@@ -6,5 +6,5 @@ This directory contains a collection of deep-dive analyses into some of the most
 
 | Incident | Year | Primary Vector | Key Lesson |
 | :--- | :--- | :--- | :--- |
-| **Conduent Data Breach** | 2025 | network intrusion targeting unencrypted "data in use" | Continuous Encryption|
+| **Conduent Data Breach** | 2025 | Network intrusion targeting unencrypted "data in use" | Continuous Encryption|
 
