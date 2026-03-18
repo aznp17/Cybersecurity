@@ -25,7 +25,8 @@ This directory contains the practical steps and documentation used to close the 
 ### 3. 📑 ISO 27001
 
 Documentation of ISO 27001 control implementation within Microsoft Azure.
-
+* **Practice** Documentation on ISO 27001 and my practice mapping it to my current projects.
+  
 ### 4. 📜 Famous Cybersecurity Reports & Case Studies
 
 To understand the current threat landscape, this folder contains analyses and summaries of famous cybersecurity breaches and industry reports. PUrpose is to study them, understand what happened, and what could be done to prevent the attack. 
@@ -35,12 +36,3 @@ To understand the current threat landscape, this folder contains analyses and su
 * **Lessons Learned:** Strategic takeaways on how modern security frameworks (like NIST or CMMC) could have prevented these disasters.
 
 
-
-
----
-
-## 🧭 How to Navigate the Repository
-
-1. **Start with the Scans:** Navigate to the `/Scans` directory to view the initial assessment of a system. Each scan file includes a brief markdown summary of the target environment.
-2. **Review the Fix:** For every scan, there is a corresponding markdown file or script in the `/Remediations` folder linked via the CVE number or system name.
-3. **Explore the Case Studies:** Browse the `/Reports` directory for standalone reading on major industry events.
