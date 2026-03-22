@@ -11,9 +11,4 @@ The goal of this documentation is to translate regulatory requirements into acti
 
 ### 1. The OSI Model Meets ISO 27001
 A major focus of this study guide is mapping the ISO 27001 Annex A controls across the **OSI 7-Layer Model**. By viewing compliance through the lens of network architecture, I break down how security controls are applied from the physical wire up to the user interface:
-* **Layer 1-2 (Physical/Data Link):** Mapping Annex A.11 (Physical and Environmental Security) to hardware access and MAC-level controls.
-* **Layer 3-4 (Network/Transport):** Mapping Annex A.13 (Communications Security) to Azure Network Security Groups (NSGs), routing, and encryption in transit.
-* **Layer 7 (Application):** Mapping Annex A.14 (System Acquisition, Development, and Maintenance) to secure coding practices, IAM, and Web App vulnerabilities.
-
-### 2. Applied GRC in Cloud Projects
-This folder also contains documentation detailing how ISO 27001 controls are implemented in my actual cloud environments. 
+1) Guide01 - Study guide linking ISO 27001 and the OSI Model (Layer 3, 4 and 7). Use primary as a reference guide for understanding. 
