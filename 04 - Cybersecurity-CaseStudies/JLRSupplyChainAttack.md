@@ -47,3 +47,14 @@ This incident is considered one of the most financially devastating supply chain
   * **Zero Trust & Network Segregation (ISO 27001 Control A.8.22):** The incident underscores the danger of flat networks. Strict segmentation must be enforced between enterprise networks and production environments to prevent lateral movement.
   * **Third-Party Risk Management (ISO 27001 Control A.5.19):** Companies must ensure that critical third-party software and vendor integrations are continuously monitored and maintained at the security level required for continuous operations.
   * **Identity and Access Governance (ISO 27001 Control A.8.2):** High-level privileges must be restricted using Just-In-Time access and protected by strong authentication requirements to prevent attackers from gaining full system control.
+
+## 📋 ISO/IEC 27001:2022 Control Mapping
+
+This incident highlights critical failures in several Information Security Management System (ISMS) controls:
+
+| ISO 27001:2022 Control | Relevance to the JLR Hack |
+| :--- | :--- |
+| **A.5.19 Information security in supplier relationships** | JLR failed to ensure the third-party software (SAP) was maintained at the security level required for mission-critical operations. |
+| **A.8.8 Management of technical vulnerabilities** | This is the "smoking gun." ISO 27001 requires organizations to obtain timely information about technical vulnerabilities and take appropriate measures. The delay in patching was a direct violation of this control. |
+| **A.8.22 Network segregation** | The attackers' ability to move from a business application (SAP) to production systems suggests a lack of robust network segregation. |
+| **A.8.31 Secure coding & Development** | While JLR didn't write SAP, ISO 27001 requires that they manage the security of software products they use, ensuring they are regularly updated. |
