@@ -19,21 +19,24 @@ Here is a breakdown of the specific data fields Vanguard Vitality collects on th
 
 ---
 
-## GRC Summary & Implications
+## Risk Assessment Matrix
 
-This current setup presents several immediate challenges from an information systems perspective.
+### Scoring Key (Likelihood x Impact)
+* **Likelihood:** 1 (Rare) to 5 (Almost Certain)
+* **Impact:** 1 (Negligible) to 5 (Severe)
+* **Risk Level:** * **1-6:** Low
+  * **8-12:** Medium
+  * **15-20:** High
+  * **25:** Critical
 
-### 1. Governance
-* **Access Control:** The underlying Google Sheet is currently shared via an "Anyone with the link can view/edit" URL among the five gym managers to make processing easier. There is no centralized access management or principle of least privilege enforced.
-* **Data Retention:** Vanguard Vitality has no established policy for how long application data is kept. Applications from people who canceled their memberships years ago still sit in the original spreadsheet.
-* **Asset Ownership:** The Google Form was created using a former manager's personal Gmail account rather than a corporate workspace account, creating a severe gap in administrative control.
+---
 
-### 2. Risk
-* **Data Breach Vulnerability:** Storing critical financial data (routing numbers) and sensitive health information in a weakly secured spreadsheet creates a massive risk for data exfiltration.
-* **Data Integrity:** Because multiple managers edit the same sheet without tracking changes, there is a high risk of accidental data deletion or modification. 
-* **Shadow IT:** Reliance on a personal Google account means the company could lose access to their entire membership database if that former manager deletes their account or changes the password.
+### Vanguard Vitality: Information Systems Risk Register
 
-### 3. Compliance
-* **PCI-DSS (Payment Card Industry Data Security Standard):** While they are collecting bank details rather than credit cards, storing financial routing data in an unencrypted, broadly accessible format violates basic financial data security standards.
-* **HIPAA / Health Privacy Laws:** Collecting specific medical conditions and medication history on an unsecured form exposes the company to severe regulatory penalties regarding the mishandling of Protected Health Information (PHI).
-* **General Privacy Regulations:** The form lacks a privacy policy acknowledgment, meaning applicants do not officially consent to how their data will be stored, used, or processed.
+| Risk ID | Risk Description | Likelihood (1-5) | Impact (1-5) | Overall Risk Score | Risk Level | Proposed Mitigation Strategy |
+| :--- | :--- | :---: | :---: | :---: | :--- | :--- |
+| **RSK-01** | **Exfiltration of Financial Data:** Unauthorized access to the unsecured Google Sheet containing bank routing and account numbers. | 4 | 5 | **20** | **High** | Immediately migrate financial onboarding to a PCI-compliant payment gateway (e.g., Stripe, Square) and purge financial data from all spreadsheets. |
+| **RSK-02** | **Exposure of Protected Health Information (PHI):** Mishandling or breach of medical conditions and medication history collected on the onboarding form. | 4 | 5 | **20** | **High** | Stop collecting detailed medical history via Google Forms. Implement a secure, HIPAA-compliant health waiver system or utilize encrypted intake software. |
+| **RSK-03** | **Loss of Database Access (Shadow IT):** The company loses access to the primary intake form and historical database because it is owned by a former employee's personal Gmail account. | 3 | 4 | **12** | **Medium** | Recreate the form under an official corporate Google Workspace account. Export all existing data to the corporate environment and sever the link to the personal account. |
+| **RSK-04** | **Data Integrity Compromise:** Accidental deletion or overwriting of member records due to multiple managers editing the same sheet without access controls. | 5 | 3 | **15** | **High** | Implement Principle of Least Privilege. Lock the master sheet from direct editing and use a dedicated CRM (Customer Relationship Management) tool to manage member profiles. |
+| **RSK-05** | **Regulatory Non-Compliance (Privacy):** Collecting personal data without explicit consent or a documented data retention/privacy policy. | 5 | 3 | **15** | **High** | Draft and publish a formal privacy policy. Add a mandatory checkbox to the intake form acknowledging the policy and consent to data processing. Implement a 90-day retention limit for non-active leads. |
