@@ -4,8 +4,6 @@ For this scenario, we will assess a specific, high-value cloud asset: **An Azure
 
 To conduct this assessment, we will look at the asset through the lens of the CIA triad, determine the potential business impact if a compromise occurs, and map out the Azure technical controls needed to satisfy ISO 27001 requirements.
 
-[Image of IT Risk Assessment Matrix]
-
 ---
 
 ### Asset: Azure Storage Account (Customer Invoices)
@@ -51,5 +49,3 @@ Once the assessment is complete, a GRC analyst compiles the findings into a risk
 | **Confidentiality** | Unauthorized data exfiltration | High | Disable Public Access, Entra ID RBAC | Low |
 | **Integrity** | Malicious alteration of invoices | High | Immutable Storage (WORM policies) | Low |
 | **Availability** | Regional outage / Accidental deletion | Medium | GRS Replication, Blob Soft Delete | Low |
-
-Would you like to draft a sample risk treatment plan for one of these specific findings, or perhaps dive deeper into how to configure the Entra ID RBAC permissions to lock down this storage account?
